@@ -1,18 +1,35 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Nova Console — Магазин игр</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;800&display=swap" rel="stylesheet"/>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/stunning-eureka/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stunning Eureka — витрина</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Готовая витрина для GitHub Pages без сборки.">
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <div class="logo"></div>
+      <strong>Stunning Eureka</strong>
+    </div>
+    <nav><a href="#catalog">Каталог</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Простой сайт на GitHub Pages</h1>
+      <p>Загрузи ZIP и включи Pages — никаких установок.</p>
+      <a class="btn primary" href="#catalog">Открыть каталог</a>
+    </section>
+
+    <h2 id="catalog">Каталог</h2>
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <footer class="wrap footer">© Твой мини-магазин</footer>
+
+  <div id="toast" class="toast">Добавлено в корзину</div>
+  <script src="./script.js"></script>
+</body>
 </html>
