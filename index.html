@@ -1,99 +1,40 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Магазин игр</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-    }
-    header {
-      background-color: #2d2dff;
-      color: white;
-      padding: 16px;
-      text-align: center;
-    }
-    .catalog {
-      display: flex;
-      flex-direction: column;
-      padding: 16px;
-      gap: 16px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .card-content {
-      padding: 12px;
-    }
-    .card-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-    .card-price {
-      color: #2d2dff;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-    .card-description {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .buy-button {
-      background-color: #2d2dff;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      border-radius: 8px;
-      text-decoration: none;
-      display: block;
-    }
-  </style>
+  <title>PS Store Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- Навигация -->
   <header>
-    <h1>Магазин игр</h1>
+    <h1>PS Store Clone</h1>
+    <nav>
+      <button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
+    </nav>
   </header>
-  <div class="catalog">
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/3/3c/Spider-Man_PS4_cover.jpg" alt="Spider-Man">
-      <div class="card-content">
-        <div class="card-title">Spider-Man</div>
-        <div class="card-price">1299 ₽</div>
-        <div class="card-description">Игра про Человека-Паука для PS4/PS5. Русская озвучка, цифровая версия.</div>
-        <a href="https://t.me/notlyrisc" class="buy-button">Купить</a>
-      </div>
-    </div><div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_Ragnarok_cover.jpg" alt="God of War">
-  <div class="card-content">
-    <div class="card-title">God of War Ragnarok</div>
-    <div class="card-price">1799 ₽</div>
-    <div class="card-description">Эпическая игра о Кратосе. Доступна на PS5 и PS4. Цифровая версия.</div>
-    <a href="https://t.me/notlyrisc" class="buy-button">Купить</a>
-  </div>
-</div>
 
-<div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Grand_Theft_Auto_V.png" alt="GTA V">
-  <div class="card-content">
-    <div class="card-title">GTA V</div>
-    <div class="card-price">999 ₽</div>
-    <div class="card-description">Классика жанра, поддержка PS4/PS5. Онлайн и сюжет в комплекте.</div>
-    <a href="https://t.me/notlyrisc" class="buy-button">Купить</a>
-  </div>
-</div>
+  <!-- Карточки игр -->
+  <section class="game-catalog">
+    <div class="game-card" data-id="1">
+      <img src="game-image.jpg" alt="Game Image">
+      <h2>Название Игры</h2>
+      <p class="game-description">Краткое описание игры...</p>
+      <button class="add-to-cart">Добавить в корзину</button>
+      <button class="contact-btn" onclick="window.location.href='https://t.me/notlyrisc'">Связаться со мной</button>
+    </div>
+    <!-- Повторить для каждой игры -->
+  </section>
 
+  <!-- Корзина -->
+  <div id="cart" class="cart">
+    <h2>Ваша корзина</h2>
+    <ul id="cart-items"></ul>
+    <button id="checkout-btn">Оформить заказ</button>
   </div>
+
 </body>
 </html>
