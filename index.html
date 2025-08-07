@@ -1,35 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stunning Eureka — витрина</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <meta name="description" content="Готовая витрина для GitHub Pages без сборки.">
+  <meta charset="UTF-8">
+  <title>PS Store – Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="wrap header">
-    <div class="brand">
-      <div class="logo"></div>
-      <strong>Stunning Eureka</strong>
-    </div>
-    <nav><a href="#catalog">Каталог</a></nav>
+  <header>
+    <h1>PS Store</h1>
+    <a href="cart.html" class="cart-link">Корзина (<span id="cart-count">0</span>)</a>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Простой сайт на GitHub Pages</h1>
-      <p>Загрузи ZIP и включи Pages — никаких установок.</p>
-      <a class="btn primary" href="#catalog">Открыть каталог</a>
-    </section>
+  <main class="catalog">
+    <!-- Пример карточки игры -->
+    <div class="game-card" data-id="1" data-title="God of War" data-price="1599">
+      <img src="images/gow.jpg" alt="God of War" class="game-thumb">
+      <h3>God of War</h3>
+      <p>Цена: 1599 ₽</p>
+    </div>
 
-    <h2 id="catalog">Каталог</h2>
-    <section class="grid" id="grid"></section>
+    <div class="game-card" data-id="2" data-title="Horizon Forbidden West" data-price="4999">
+      <img src="images/hfw.jpg" alt="Horizon Forbidden West" class="game-thumb">
+      <h3>Horizon Forbidden West</h3>
+      <p>Цена: 4999 ₽</p>
+    </div>
+    <!-- Добавьте столько карточек, сколько нужно -->
   </main>
 
-  <footer class="wrap footer">© Твой мини-магазин</footer>
-
-  <div id="toast" class="toast">Добавлено в корзину</div>
-  <script src="./script.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
